@@ -9,5 +9,12 @@ export class AppComponent {
   title = 'my-store'
   name = 'Camiliño';
   age = 18;
-  img = 'https://images.unsplash.com/photo-1675848164140-c4624f68b195?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY3NzI0NzI5Ng&ixlib=rb-4.0.3&q=80&w=1080'
+  img = 'https://img.freepik.com/vector-gratis/conjunto-logotipos_53876-120502.jpg'
+
+  btnDisabled = true;
+  person = {
+    name: 'Camiliño',
+    age: 18,
+    avatar: 'https://cdn-icons-png.flaticon.com/512/147/147144.png'
+  }
 }

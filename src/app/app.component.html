@@ -1,5 +1,18 @@
+<!-- String {{ interpolation }} -->
 <h1>Hola Mundo</h1>
 <h2>{{ 'Hola Mundo'.repeat(5) }}</h2>
 <p>3 + 3 = {{ 3 + 3 }}</p>
 <h3>Hola, soy {{ name }} y tengo {{ age }} y mi aplicacion se llama {{ title }}</h3>
-<img src="{{ img }}" alt="imagen">
+<img src="{{ img }}" alt="imagen" />
+<hr />
+
+<!-- Property [ Binding ] -->
+<h1>Propiedades</h1>
+<button [disabled] = "btnDisabled">Enviar</button>
+<input type="text" [value]="name" />
+<progress max="100" [value]="age"></progress>
+<img width="100" [src]="img" alt="" />
+<br>
+<input type="text" [placeholder]="person.name" />
+<input type="text" [value]="person.age" />
+<img [src]="person.avatar" alt="avatar" width="100" />
