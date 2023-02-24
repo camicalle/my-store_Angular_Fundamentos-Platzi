@@ -10,9 +10,19 @@
 <h1>Propiedades</h1>
 <button [disabled] = "btnDisabled">Enviar</button>
 <input type="text" [value]="name" />
-<progress max="100" [value]="age"></progress>
+<progress max="100" [value]="person.age"></progress>
 <img width="100" [src]="img" alt="" />
 <br>
 <input type="text" [placeholder]="person.name" />
 <input type="text" [value]="person.age" />
 <img [src]="person.avatar" alt="avatar" width="100" />
+
+<hr />
+
+<!-- Event (Binding) -->
+<h1>Eventos</h1>
+<button [disabled]="btnDisabled">Enviar</button>
+<button (click)="toggleButton()">Toggle Butoon</button>
+<br>
+<p>Edad {{ person.age }}</p>
+<button (click)="increaseage()">Age ++</button>

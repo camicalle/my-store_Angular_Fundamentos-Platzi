@@ -17,4 +17,11 @@ export class AppComponent {
     age: 18,
     avatar: 'https://cdn-icons-png.flaticon.com/512/147/147144.png'
   }
+
+  toggleButton() {
+    this.btnDisabled = !this.btnDisabled;
+  }
+  increaseage() {
+    this.person.age += 1;
+  }
 }
