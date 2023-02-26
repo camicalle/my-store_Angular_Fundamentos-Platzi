@@ -14,7 +14,7 @@
 <img width="100" [src]="img" alt="" />
 <br>
 <input type="text" [placeholder]="person.name" />
-<input type="text" [value]="person.age" />
+<input type="number" [value]="person.age" />
 <img [src]="person.avatar" alt="avatar" width="100" />
 
 <hr />
@@ -33,3 +33,17 @@
 <p>Nombre {{ person.name }}</p>
 <input type="text" [value]="person.name" (keyup)="changeName($event)" />
 <br />
+<hr />
+
+<!-- Data [(Binding)] -->
+<h1>NgModel</h1>
+<p>Nombre {{ person.name }}</p>
+<input type="text" [(ngModel)]="person.name" />
+<br />
+<br />
+<input type="text" required #nameInput="ngModel" [(ngModel)]="person.name" />
+<p> Valid: {{ nameInput.valid }}</p>
+<br />
+<br />
+<input type="number" min="10" max="18" required #ageInput="ngModel" [(ngModel)]="person.age" />
+<p> Valid: {{ ageInput.valid }}</p>
