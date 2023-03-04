@@ -1,3 +1,12 @@
+<div align="center">
+    <a href="https://angular.io/">
+        <img
+            alt="Angular"
+            src="https://angular.io/assets/images/logos/angular/logo-nav@2x.png"
+            width="150">
+    </a>
+</div>
+
 # MyStore
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.0.
