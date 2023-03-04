@@ -2,7 +2,7 @@
     <a href="https://angular.io/">
         <img
             alt="Angular"
-            src="https://angular.io/assets/images/logos/angular/logo-nav@2x.png"
+            src="https://cdn.freebiesupply.com/logos/large/2x/angular-3-logo-png-transparent.png"
             width="150">
     </a>
 </div>
