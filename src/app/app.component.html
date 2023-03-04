@@ -47,3 +47,58 @@
 <br />
 <input type="number" min="10" max="18" required #ageInput="ngModel" [(ngModel)]="person.age" />
 <p> Valid: {{ ageInput.valid }}</p>
+<hr />
+
+<!-- Directive: *ngIf -->
+<h1>*ngIf</h1>
+<input type="text" required [(ngModel)]="person.name" />
+<p *ngIf="person.name === 'Camiliño'">Soy Camiliño</p>
+<p *ngIf="person.name === 'Julian' && person.age === 18; else elseBlock">Soy Julian</p>
+<ng-template #elseBlock>
+  <p>Bloque de else</p>
+</ng-template>
+
+<!-- Directive: *ngFor -->
+<h1>*ngFor</h1>
+<input type="text" required [(ngModel)]="newName" />
+<button (click)="addName()">Add name</button>
+<ul>
+  <li *ngIf="names.length === 0">No hay nombres</li>
+  <!-- names es el nombre del array que tengo en app.componente.ts -->
+  <li *ngFor="let name of names, index as i">
+    {{ i }} - {{ name }}
+    <button (click)="deleteName(i)">Delete</button>
+  </li>
+</ul>
+<hr />
+
+<!-- Directive: *ngFor Object -->
+<h1>*ngFor Object</h1>
+<div>
+  <div *ngFor="let product of products">
+    <h3>Nombre: {{ product.name }}</h3>
+    <h4>Precio: {{ product.price }}</h4>
+    <p *ngIf="product.category != null">Categoria: {{ product.category }}</p>
+    <img [src]="product.image" alt="" width="250px">
+  </div>
+</div>
+<hr />
+
+<!-- Directive: [ngSwitch] -->
+<h1>[ngSwitch]</h1>
+<input type="text" required [(ngModel)]="person.name" />
+<div [ngSwitch]="person.name">
+  <p *ngSwitchCase="'Camiliño'">
+    La persona es Camiliño
+  </p>
+  <p *ngSwitchCase="'Julian'">
+    La persona es Julian
+  </p>
+  <p *ngSwitchCase="'Camilo'">
+    La persona es Camilo
+  </p>
+  <p *ngSwitchDefault>
+    No match
+  </p>
+</div>
+<hr />
