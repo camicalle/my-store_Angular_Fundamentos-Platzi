@@ -3,7 +3,7 @@
 <h2>{{ 'Hola Mundo'.repeat(5) }}</h2>
 <p>3 + 3 = {{ 3 + 3 }}</p>
 <h3>Hola, soy {{ name }} y tengo {{ age }} y mi aplicacion se llama {{ title }}</h3>
-<img src="{{ img }}" alt="imagen" />
+<img src="{{ img }}" alt="imagen" width="100px" />
 <hr />
 
 <!-- Property [ Binding ] -->
@@ -74,12 +74,15 @@
 
 <!-- Directive: *ngFor Object -->
 <h1>*ngFor Object</h1>
-<div>
+<div class="products--grid">
   <div *ngFor="let product of products">
-    <h3>Nombre: {{ product.name }}</h3>
+    <p>{{ product.name }}</p>
     <h4>Precio: {{ product.price }}</h4>
-    <p *ngIf="product.category != null">Categoria: {{ product.category }}</p>
-    <img [src]="product.image" alt="" width="250px">
+    <p *ngIf="product.category != null else NotCategory">Categoria: {{ product.category }}</p>
+    <ng-template #NotCategory>
+      <p>Sin categoria</p>
+    </ng-template>
+    <img [src]="product.image" alt="">
   </div>
 </div>
 <hr />

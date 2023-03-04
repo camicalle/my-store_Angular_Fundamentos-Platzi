@@ -3,7 +3,7 @@
         <img
             alt="Angular"
             src="https://cdn.freebiesupply.com/logos/large/2x/angular-3-logo-png-transparent.png"
-            width="150">
+            width="200">
     </a>
 </div>
 
