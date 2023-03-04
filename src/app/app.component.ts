@@ -84,4 +84,6 @@ export class AppComponent {
       category: 'all',
     }
   ]
+
+  widthImage = 10;
 }

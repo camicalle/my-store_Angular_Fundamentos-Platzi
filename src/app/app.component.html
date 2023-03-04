@@ -105,3 +105,22 @@
   </p>
 </div>
 <hr />
+
+<!-- Class & Style -->
+<h1>Class & Style</h1>
+<input type="text" required #nameInputTwo="ngModel" [(ngModel)] ="person.name" />
+<p class="message-error" [class.invalid]="nameInputTwo.invalid">
+  El campo es requerido
+</p>
+<label>Nombre</label>
+<input type="text" required #nameInputThree="ngModel" [(ngModel)] ="person.name" />
+<p [style.font-style]="nameInputThree.invalid ? 'italic' : 'normal'">Texto texto texto</p>
+<div class="styles">
+  <div>
+    <input type="text" [(ngModel)] ="widthImage" />
+  </div>
+  <div>
+    <img [src]="person.avatar" alt="imagen" [style.width.%]="widthImage" />
+  </div>
+</div>
+<hr />
