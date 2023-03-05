@@ -91,4 +91,14 @@ export class AppComponent {
     height: 100,
     background: 'red'
   }
+
+  register = {
+    name: '',
+    email: '',
+    password: '',
+  }
+
+  onRegister() {
+    console.log(this.register);
+  }
 }
